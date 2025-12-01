@@ -2,7 +2,6 @@ import pygame
 import os
 
 
-
 class MenuManager:
     """Manages main menu, credits, and guide screens with buttons & backgrounds."""
 
@@ -36,7 +35,8 @@ class MenuManager:
         self.sound_manager = None
 
         # Fonts
-        self.font_title = pygame.font.Font(None, int(self.screen_height * 0.10))
+        self.font_title = pygame.font.Font(
+            None, int(self.screen_height * 0.10))
         self.font_body = pygame.font.Font(None, int(self.screen_height * 0.06))
 
         # Load semua aset
@@ -58,7 +58,8 @@ class MenuManager:
             path = os.path.join(self.assets_dir, filename)
             if os.path.exists(path):
                 img = pygame.image.load(path).convert()
-                scaled = pygame.transform.scale(img, (self.screen_width, self.screen_height))
+                scaled = pygame.transform.scale(
+                    img, (self.screen_width, self.screen_height))
                 setattr(self, attr, scaled)
             else:
                 print(f"[Warning] Background missing: {path}")
@@ -79,7 +80,8 @@ class MenuManager:
                 img = pygame.image.load(path).convert_alpha()
                 aspect = img.get_width() / img.get_height()
                 new_width = int(target_height * aspect)
-                scaled = pygame.transform.smoothscale(img, (new_width, target_height))
+                scaled = pygame.transform.smoothscale(
+                    img, (new_width, target_height))
 
                 cx = int(self.screen_width * info['pos'][0])
                 cy = int(self.screen_height * info['pos'][1])
@@ -156,14 +158,38 @@ class MenuManager:
         """Return nama tombol jika hover, else None."""
         if hand_pos is None:
             return None
-        
+
         for name, btn in self.buttons.items():
             if btn["rect"].collidepoint(hand_pos):
                 return name
-        
+
+        return None
+
+    def check_button_fist_click(self, hand_info):
+        """
+        Check if either hand is making a fist over any button.
+
+        Args:
+            hand_info: Dictionary with left_hand and right_hand info containing
+                      position and is_fist status
+
+        Returns:
+            Button name if fist detected over button, None otherwise
+        """
+        # Check both hands
+        for hand_key in ['left_hand', 'right_hand']:
+            hand = hand_info.get(hand_key, {})
+            hand_pos = hand.get('position')
+            is_fist = hand.get('is_fist', False)
+
+            # If hand is making fist and positioned over a button
+            if is_fist and hand_pos:
+                for name, btn in self.buttons.items():
+                    if btn['rect'].collidepoint(hand_pos):
+                        return name
+
         return None
 
     def play_button_sound(self):
         if self.sound_manager:
             self.sound_manager.play_sound('button')
-
