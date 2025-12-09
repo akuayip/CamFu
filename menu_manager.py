@@ -51,7 +51,7 @@ class MenuManager:
         bg_files = {
             "bg_menu": "landing_page.png",
             "bg_credits": "credit_page.png",
-            "bg_guide": "landing_page.png"  # nanti diganti kalau punya
+            "bg_guide": "guide_page.png"  
         }
 
         for attr, filename in bg_files.items():
@@ -127,29 +127,6 @@ class MenuManager:
 
     def draw_guide_screen(self):
         self._draw_background(self.bg_guide)
-        self._draw_title("How to Play")
-
-        guide_texts = [
-            "Pukul target HIJAU (+Poin)",
-            "Hindari bom MERAH (-Nyawa)",
-            "Ambil power-up KUNING (Bonus)",
-            "Gunakan jari telunjuk untuk kursor"
-        ]
-
-        y = int(self.screen_height * 0.38)
-        for line in guide_texts:
-            txt = self.font_body.render(line, True, (230, 230, 230))
-            rect = txt.get_rect(center=(self.screen_width//2, y))
-
-            bg = rect.inflate(20, 10)
-            s = pygame.Surface((bg.width, bg.height))
-            s.set_alpha(130)
-            s.fill((0, 0, 0))
-            self.screen.blit(s, bg.topleft)
-
-            self.screen.blit(txt, rect)
-            y += int(self.screen_height * 0.08)
-
         self._draw_buttons(('back',))
 
     # Interaction
