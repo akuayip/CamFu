@@ -200,8 +200,8 @@ class Obstacle(GameObject):
 
     def _load_image(self):
         """Load a random hit image from assets."""
-        # Choose random hit image (1, 2, or 3)
-        hit_num = random.randint(1, 3)
+        # Choose random hit image (1 or 2)
+        hit_num = random.randint(1, 2)
         image_name = f'hit_{hit_num}.png'
         
         # Check cache first

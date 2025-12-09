@@ -385,7 +385,9 @@ def main():
             if landmarks:
                 game_renderer.draw_stickman(landmarks, pose_detector)
 
-            game_renderer.draw_hand_indicators(hand_info)
+            # 4. Draw hand landmarks and fist indicators (with arm blocking visual)
+            game_renderer.draw_hand_indicators(
+                hand_info, landmarks, pose_detector)
             game_renderer.draw_ui(game_engine.score_manager, clock, hand_info)
 
             if game_engine.score_manager.game_over:
