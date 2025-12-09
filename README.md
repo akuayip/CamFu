@@ -227,48 +227,23 @@ python main.py
 ## 📂 Struktur Project
 
 ```
-Mulmed-Ceria/
-├── 📄 main.py                 # Entry point (State Pattern)
-├── ⚙️ config.py               # Game constants & settings
+CamFu/
+├── 📄 main.py                 # Entry point aplikasi
 ├── 🎮 game_engine.py          # Core game logic
-│
-├── 🧠 core/                   # Core systems
-│   └── game_state_manager.py  # State management
-│
-├── 🎭 states/                 # Game states
-│   ├── base_state.py          # Abstract base class
-│   ├── menu_state.py          # Main menu
-│   ├── countdown_state.py     # Pre-game countdown
-│   ├── gameplay_state.py      # Main gameplay
-│   ├── game_over_state.py     # Game over screen
-│   ├── credits_state.py       # Credits
-│   └── guide_state.py         # Tutorial
-│
-├── 🎨 rendering/              # Rendering components
-│   ├── renderer.py            # Main renderer
-│   ├── ui_renderer.py         # UI elements
-│   ├── stickman_renderer.py   # Pose visualization
-│   └── countdown_renderer.py  # Countdown animation
-│
-├── 🕵️ detection/              # AI/ML components
-│   ├── pose_detector.py       # MediaPipe pose tracking
-│   └── collision_detector.py  # Collision system
-│
-├── 👔 managers/               # Game managers
-│   ├── camera_manager.py      # Webcam handling
-│   ├── menu_manager.py        # Menu system
-│   ├── sound_manager.py       # Audio system
-│   ├── score_manager.py       # Scoring & lives
-│   └── spawn_manager.py       # Object spawning
-│
-├── 🎯 entities/               # Game objects
-│   └── game_objects.py        # Target, Obstacle, PowerUp
-│
-├── 🛠️ utils/                  # Utilities
-│   └── helpers.py             # Helper functions
+├── 🎨 renderer.py             # Main renderer
+├── 🕵️ pose_detector.py        # MediaPipe pose tracking
+├── 🔍 collision_detector.py   # Collision detection system
+├── 🎯 game_objects.py         # Game objects (Target, Obstacle, PowerUp)
+├── 👔 menu_manager.py         # Menu system
+├── 🔊 sound_manager.py        # Audio system
+├── 📊 score_manager.py        # Scoring & lives management
+├── 🎲 spawn_manager.py        # Object spawning logic
+├── 📝 requirements.txt        # Python dependencies
+├── 📖 README.md               # Project documentation
+├── 📋 GAME_README.md          # Game-specific documentation
 │
 └── 📁 assets/                 # Game assets
-    ├── images/                # Sprites & UI
+    ├── images/                # UI
     └── sounds/                # Audio files
 ```
 
