@@ -1,4 +1,3 @@
-
 <div align="center">
 
 # 🥋 Cam-Fu
@@ -90,13 +89,14 @@ Game ini menggunakan deteksi pose full-body dan hand gesture recognition untuk m
 <details>
 <summary><b>📊 Lihat Progress Lengkap</b></summary>
 
-| Minggu | Periode              | 📝 Progress & Update                                                                                                   |
-| :----: | -------------------- | ---------------------------------------------------------------------------------------------------------------------- |
-| **1**  | 28 Okt - 2 Nov 2025  | ✅ Membuat repository GitHub<br>✅ Brainstorming ide project game berbasis webcam                                      |
-| **2**  | 4 Nov - 9 Nov 2025   | ✅ Menambahkan asset untuk game<br>✅ Refactor sistem collision detection<br>✅ Implementasi body landmark to stickman |
-| **3**  | 11 Nov - 16 Nov 2025 | ✅ Implementasi main menu dengan gesture control                                                                       |
-| **4**  | 18 Nov - 23 Nov 2025 | ✅ Refactor collision detection pada kepala<br>✅ Implementasi hand landmark untuk deteksi buka/tutup tangan           |
-| **5**  | 25 Nov - 30 Nov 2025 |                                                                                                                        |
+| Minggu | Periode              | 📝 Progress & Update                                                                                                                  |
+| :----: | -------------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
+| **1**  | 28 Okt - 2 Nov 2025  | ✅ Membuat repository GitHub<br>✅ Brainstorming ide project game berbasis webcam                                                     |
+| **2**  | 4 Nov - 9 Nov 2025   | ✅ Menambahkan asset untuk game<br>✅ Refactor sistem collision detection<br>✅ Implementasi body landmark to stickman                |
+| **3**  | 11 Nov - 16 Nov 2025 | ✅ Implementasi main menu dengan gesture control                                                                                      |
+| **4**  | 18 Nov - 23 Nov 2025 | ✅ Refactor collision detection pada kepala<br>✅ Implementasi hand landmark untuk deteksi buka/tutup tangan                          |
+| **5**  | 25 Nov - 30 Nov 2025 | ✅ Memperbaiki cara klik menu<br>✅ Ganti aset game hit and poin <br>✅ Menambahkan fitur ganti/pilih kamera<br>✅ Menyiapkan laporan |
+| **6**  | 1 Des - 12 Des 2025  | ✅ Finishing code<br>✅ Finishing asset<br>✅ Finishing laporan                                                                       |
 
 </details>
 
