@@ -427,28 +427,21 @@ def main():
             # Tambah timer
             game_over_timer += dt
 
-            # PHASE 1: 0 - 2.5 Detik (Intro Hitam)
+            # PHASE 1: 0 - 2.5 Detik (Intro dengan Logo Game Over)
             if game_over_timer < 2.5:
-                black_screen = pygame.Surface((SCREEN_W, SCREEN_H))
-                black_screen.fill((0, 0, 0))
-                screen.blit(black_screen, (0, 0))
+                game_renderer.draw_game_over_screen(
+                    game_engine.score_manager,
+                    play_duration=play_duration,
+                    phase=1  # Tampilkan game_over.png
+                )
 
-            # PHASE 2: Setelah 2.5 Detik (Game Over Screen)
+            # PHASE 2: Setelah 2.5 Detik (Hasil Akhir)
             else:
-                # Draw game elements with game over overlay
-                game_renderer.draw_game_objects(
-                    game_engine.targets, game_engine.obstacles, game_engine.powerups)
-
-                if landmarks:
-                    game_renderer.draw_stickman(landmarks, pose_detector)
-
-                # hand_info untuk game over screen (kosong jika tidak ada)
-                empty_hand_info = {
-                    'left_hand': {'position': None, 'is_fist': False},
-                    'right_hand': {'position': None, 'is_fist': False}
-                }
-                game_renderer.draw_ui(
-                    game_engine.score_manager, clock, empty_hand_info)
+                game_renderer.draw_game_over_screen(
+                    game_engine.score_manager,
+                    play_duration=play_duration,
+                    phase=2  # Tampilkan score + time + menu button
+                )
 
         # Cursor Rendering (Hidden During Gameplay)
         if current_state != GAME_PLAY:
