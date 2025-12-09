@@ -1,0 +1,3 @@
+# Placeholder file for hit sound
+# This will be replaced with actual .wav file later
+# For now, the SoundManager will generate a simple beep sound
