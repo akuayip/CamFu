@@ -1,8 +1,6 @@
 <div align="center">
 
-# 🥋 Cam-Fu
-
-<img src="assets/images/icon.png" alt="Cam-Fu Logo" width="200"/>
+<img src="assets/images/icon.png" alt="Cam-Fu Logo" width="400"/>
 
 ### Pose Fighting Game
 
