@@ -80,7 +80,7 @@ class Target(GameObject):
     def _load_image(self):
         """Load a random poin image from assets."""
         # Choose random poin image (1 or 2)
-        poin_num = random.randint(1, 2)
+        poin_num = random.randint(1, 3)
         image_name = f'poin_{poin_num}.png'
         
         # Check cache first
