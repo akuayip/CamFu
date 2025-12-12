@@ -44,6 +44,10 @@ Game ini menggunakan deteksi pose full-body dan hand gesture recognition untuk m
 - **Background Music** & sound effects
 - **Countdown Animation** sebelum game dimulai
 
+### 📽 Video Demo
+[Klik di sini untuk buka Google]((https://youtu.be/QBuYvmMChIo))
+
+
 ### 🎯 Gameplay Features
 
 - **Multiple Object Types**: Targets, Obstacles, Power-ups
